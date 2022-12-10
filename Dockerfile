@@ -8,8 +8,8 @@ WORKDIR /etc/apache2/sites-available
 
 COPY ./sites /etc/apache2/sites-available
 
-RUN a2enmod http
-RUN a2enmod http_proxy
+RUN a2enmod proxy
+RUN a2enmod proxy_http
 
 RUN a2ensite portainer.conf
 RUN a2ensite portainer-ssl.conf
