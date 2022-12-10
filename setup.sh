@@ -1,6 +1,6 @@
-# bash ./build.sh
-#apt install -y  python3-certbot-apache
-apt install certbot
-certbot certonly --standalone -d simax-dev.net -d www.simax-dev.net -d portainer.simax-dev.net 
+apt install apache2 certbot python3-certbot-apache
 
-# Destination path for certificates: /etc/letsencrypt/live/simax-dev.net/fullchain.pem
+a2enmod proxy
+a2enmod proxy_http
+
+cp -r sites/* /etc/apache2/sites-available
