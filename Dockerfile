@@ -17,4 +17,4 @@ RUN a2ensite portainer-ssl.conf
 EXPOSE 80 80
 EXPOSE 443 443
 
-CMD ["apache2"]
+CMD source /etc/apache2/envvars && apache2
