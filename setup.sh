@@ -5,3 +5,8 @@ a2enmod proxy_http
 a2enmod headers
 
 cp -r sites/* /etc/apache2/sites-available
+
+a2ensite portainer.conf
+
+systemctl restart apache2
+systemctl enable --now apache2
