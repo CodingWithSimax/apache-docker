@@ -1,7 +1,7 @@
 FROM debian:latest
 
 RUN apt update
-RUN apt install apache2
+RUN apt install -y apache2
 
 RUN mkdir -p /etc/apache2/sites-available
 WORKDIR /etc/apache2/sites-available
